@@ -1,0 +1,130 @@
+header {
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    text-transform: capitalize;
+    position: fixed;
+    z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 1em 10px 45px;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.logo {
+    text-decoration: none;
+    color: #8e2be2;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    -webkit-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease;
+}
+
+body.dark .logo {
+    color: #dc76ff;
+}
+
+.logo:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+body.dark header {
+    background-color: #111;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navigation a {
+    color: #8e2be2;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+@media (max-width: 860px) {
+    .logo {
+        font-size: 1.25em;
+    }
+    .navigation a {
+        font-size: 1em;
+    }
+}
+
+body.dark .navigation a {
+    color: #dc76ff;
+}
+
+body.dark .navigation a .navbar-icon {
+    color: #8e2be2;
+}
+
+.navigation a:hover {
+    color: #3a6cf4;
+}
+
+.menu-toggle {
+    display: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color: hsl(272, 76%, 53%);
+    outline: none;
+    border: 2px #8e2be2 solid;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+.navbar-icon {
+    padding: 10px;
+}
+
+@media (width: 767px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 645px) {
+    header {
+        padding: 10px 25px;
+    }
+}
+
+/* dark mode toggle */
+body.dark .darkmode-toggle {
+    color: #dc76ff;
+}
+
+body.dark .darkmode-toggle:hover {
+    color: #8e2be2;
+}
+
+.darkmode-toggle i {
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    color: #8e2be2;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}

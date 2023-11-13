@@ -1,0 +1,168 @@
+.skills {
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark .skills {
+    background: #1f1f1f;
+    color: #fff;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+}
+
+.skills-container .category {
+    border-top: 3px #e0e0e0 solid;
+    padding: 2em;
+    position: relative;
+}
+
+.skills-container .category .category-title {
+    position: absolute;
+    top: -0.8em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 1em;
+}
+
+body.dark .skills-container .category .category-title {
+    background: #1f1f1f;
+    color: #fff;
+}
+
+.skills-list .skill {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.skills-list .skill i {
+    font-size: 3em;
+    width: 10%;
+    padding-right: 1em;
+}
+
+body.dark .skills-list .skill i {
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-list .skill i {
+        font-size: 2em;
+    }
+}
+
+.skills-list .skill div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.skill .skill-title {
+    font-size: 1em;
+    font-weight: 600;
+    width: 7em;
+}
+
+.skill .skill-bar {
+    width: 100%;
+    height: 1em;
+    background-color: #e0e0e0;
+    border-radius: 0.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill .skill-bar .skill-progress {
+    height: 100%;
+    background: linear-gradient(45deg, #8e2be2, #dc76ff, #8e2be2);
+    background-position: 0%;
+    background-size: 300%;
+    animation: gradient 4s ease infinite;
+    border-radius: 0.2em;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+    width: 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+.skill .skill-bar .skill-progress .skill-percentage {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.skill-loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2em;
+}
+
+.skill-loading div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: skill-loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #8e2be2 transparent transparent transparent;
+}
+
+body.dark .skill-loading div {
+    border-color: #fff transparent transparent transparent;
+}
+
+.skill-loading div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.skill-loading div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.skill-loading div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes skill-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

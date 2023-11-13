@@ -1,0 +1,22 @@
+.social {
+    -webkit-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease;
+}
+
+body.dark .social {
+    background: #1f1f1f;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+body.dark #socials .content .data-card {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    outline: 0.5px rgba(255, 255, 255, 0.182) solid;
+}
+
+body.dark #socials .content .data-card:hover {
+    outline: 1px #8e2be2 solid;
+}

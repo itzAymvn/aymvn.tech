@@ -1,0 +1,124 @@
+.contact {
+    background-color: white;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+body.dark .contact {
+    background: #1f1f1f;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.contact .title {
+    color: #8e2be2;
+}
+
+body.dark .contact .title {
+    color: #dc76ff;
+}
+
+.contactform {
+    width: 100%;
+}
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.contactform form .form-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.contactform form .form-inputs .user-data {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .contactform form .form-inputs {
+        flex-direction: column;
+    }
+
+    .contactform form .form-inputs .user-data {
+        width: 100%;
+    }
+}
+
+.contactform form .form-inputs textarea {
+    width: 100%;
+}
+
+.contactform form .form-inputs .user-data input,
+.contactform form .form-inputs textarea {
+    padding: 1em;
+    border-radius: 5px;
+    border: 2px solid #8e2be2;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.033);
+    color: black;
+}
+
+body.dark .contactform form .form-inputs .user-data input,
+body.dark .contactform form .form-inputs textarea {
+    color: white;
+}
+.contactform form .form-inputs .user-data input::placeholder,
+.contactform form .form-inputs textarea::placeholder {
+    color: #b5b5b5;
+}
+
+body.dark .contactform form .form-inputs .user-data input::placeholder,
+body.dark .contactform form .form-inputs textarea::placeholder {
+    color: #5a5a5a;
+}
+
+body.dark .contactform form .form-inputs .user-data input,
+body.dark .contactform form .form-inputs textarea {
+    background-color: rgba(255, 255, 255, 0.033);
+    outline: 1px #8e2be2 solid;
+}
+
+.contactform button[type="submit"] {
+    background-color: #8e2be2;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+    font-weight: bold;
+}
+
+.contactform button[type="submit"] {
+    background: linear-gradient(45deg, #8e2be2, #dc76ff, #8e2be2);
+    background-position: 0%;
+    background-size: 300%;
+
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}

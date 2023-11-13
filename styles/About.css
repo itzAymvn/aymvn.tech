@@ -1,0 +1,43 @@
+body.dark .infos {
+    background: #111;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.infos {
+    -webkit-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease;
+        background: linear-gradient(90deg, #d24aff, #961eff);
+        animation: gradient 10s ease infinite;
+        background-size: 400% 400%;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0%;
+        }
+        50% {
+            background-position: 100%;
+        }
+        100% {
+            background-position: 0%;
+        }
+    }
+
+.infos .title {
+    color: white;
+}
+
+.infos .content .data-card {
+    outline: 1px white solid;
+}
+
+.infos .content .data-card:hover {
+    outline: 1px #dc76ff solid;
+}
+
+body.dark .infos .content .data-card:hover {
+    outline: 1px #8e2be2 solid;
+}
